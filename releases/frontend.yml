@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: frontend
+      app: yutani
+  template:
+    metadata:
+      labels:
+        component: frontend
+        app: yutani
+    spec:
+      containers:
+        - name: frontend
+          image: mmacphail/yutani-frontend:sha-3512d3e
+          resources:
+            limits:
+              cpu: "1"
+              memory: "200Mi"
+            requests:
+              cpu: "0.5"
+              memory: "100Mi"
+          ports:
+            - containerPort: 80 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+spec:
+  type: ClusterIP
+  selector:
+    component: frontend
+    app: yutani
+  ports:
+    - port: 80
+      targetPort: 80
