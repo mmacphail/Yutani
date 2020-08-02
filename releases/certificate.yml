@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: yutani-macphail-eu-tls
+spec:
+  secretName: yutani-macphail-eu
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: yutani.macphail.eu
+  dnsNames:
+    - yutani.macphail.eu
