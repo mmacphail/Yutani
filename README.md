@@ -10,6 +10,10 @@
 
 ### ✨ [Demo](https://yutani.macphail.eu)
 
+### Angular
+
+* Setup [authentication with Auth0](https://auth0.com/docs/quickstart/spa/angular2)
+
 ### CI
 
 * Use Github actions to [publish docker images](https://github.com/marketplace/actions/build-and-push-docker-images)
