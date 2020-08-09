@@ -20,4 +20,4 @@ spec:
           - path: /api/?(.*)
             backend:
               serviceName: game
-              servicePort: 80
+              servicePort: 8080

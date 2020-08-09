@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: game
   namespace: yutani
 spec:
   replicas: 1
   selector:
     matchLabels:
-      component: frontend
+      component: game
       app: yutani
   template:
     metadata:
       labels:
-        component: frontend
+        component: game
         app: yutani
     spec:
       containers:
-        - name: frontend
-          image: mmacphail/yutani-frontend:sha-bcfa3c0
+        - name: game
+          image: mmacphail/yutani-game:sha-102d692
           resources:
             limits:
               cpu: "1"
@@ -26,18 +26,18 @@ spec:
               cpu: "0.5"
               memory: "100Mi"
           ports:
-            - containerPort: 80 
+            - containerPort: 8080 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend
+  name: game
   namespace: yutani
 spec:
   type: ClusterIP
   selector:
-    component: frontend
+    component: game
     app: yutani
   ports:
-    - port: 80
-      targetPort: 80
+    - port: 8080
+      targetPort: 8080
