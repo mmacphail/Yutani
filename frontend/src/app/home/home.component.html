@@ -1,2 +1,112 @@
-<app-navbar></app-navbar>
-<p>This is home</p>
+<nav class="navbar has-shadow">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="../">
+                <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox">
+            </a>
+
+            <div class="navbar-burger burger" data-target="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                Account
+                </a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                    Dashboard
+                    </a>
+                    <a class="navbar-item">
+                    Profile
+                    </a>
+                    <a class="navbar-item">
+                    Settings
+                    </a>
+                    <hr class="navbar-divider">
+                    <a class="navbar-item">
+                    Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="columns" id="mail-app">
+    <aside class="column is-2 aside hero is-fullheight">
+        <div>
+            <div class="compose has-text-centered">
+                <a class="button is-danger is-block is-bold">
+                    <span class="compose">Compose</span>
+                </a>
+            </div>
+            <div class="main">
+                <a href="#" class="item active"><span class="icon"><fa-icon [icon]="faInbox"></fa-icon></span><span class="name">Inbox</span></a>
+                <a href="#" class="item"><span class="icon"><fa-icon [icon]="faStar"></fa-icon></span><span class="name">Starred</span></a>
+                <a href="#" class="item"><span class="icon"><fa-icon [icon]="faEnvelopeOpen"></fa-icon></span><span class="name">Sent Mail</span></a>
+                <a href="#" class="item"><span class="icon"><fa-icon [icon]="faFolderOpen"></fa-icon></span><span class="name">Folders</span></a>
+            </div>
+        </div>
+    </aside>
+    <div class="column is-4 messages hero is-fullheight" id="message-feed">
+        <div class="action-buttons">
+            <div class="control is-grouped">
+                <a class="button is-small">
+                    <fa-icon [icon]="faChevronDown"></fa-icon>
+                </a>
+                <a class="button is-small">
+                    <fa-icon [icon]="faRefresh"></fa-icon>
+                </a>
+            </div>
+            <div class="control is-grouped">
+                <a class="button is-small">
+                    <fa-icon [icon]="faInbox"></fa-icon>
+                </a>
+                <a class="button is-small">
+                    <fa-icon [icon]="faExclamationCircle"></fa-icon>
+                </a>
+                <a class="button is-small">
+                    <fa-icon [icon]="faTrash"></fa-icon>
+                </a>
+            </div>
+            <div class="control is-grouped">
+                <a class="button is-small">
+                    <fa-icon [icon]="faFolder"></fa-icon>
+                </a>
+                <a class="button is-small">
+                    <fa-icon [icon]="faTag"></fa-icon>
+                </a>
+            </div>
+            <div class="control is-grouped pg">
+                <div class="title">0-5 of 10</div>
+                <a class="button is-link">
+                    <fa-icon [icon]="faChevronLeft"></fa-icon>
+                </a>
+                <a class="button is-link">
+                    <fa-icon [icon]="faChevronRight"></fa-icon>
+                </a>
+            </div>
+        </div>
+
+        <app-locations [locations]="locations$ | async"></app-locations>
+    </div>
+    <app-location-details [location]="currentLocation$ | async"></app-location-details>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Bulma Templates</strong> by <a href="https://github.com/dansup">Daniel Supernault</a>. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+            </p>
+            <p>
+                <a class="icon" href="https://github.com/BulmaTemplates/bulma-templates">
+                    <fa-icon [icon]="faCode"></fa-icon>
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>

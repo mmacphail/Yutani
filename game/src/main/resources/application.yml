@@ -1,0 +1,12 @@
+spring:
+  jmx:
+    enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://mmacphail.eu.auth0.com/
