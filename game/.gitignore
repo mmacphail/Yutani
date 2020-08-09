@@ -32,3 +32,8 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### jOOQ ###
+library.xml
+jOOQ-3.13.4
+jOOQ-3.13.4.zip

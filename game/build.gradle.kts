@@ -20,6 +20,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-jooq")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.flywaydb:flyway-core")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")

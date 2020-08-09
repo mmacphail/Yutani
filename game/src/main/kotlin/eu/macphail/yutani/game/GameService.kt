@@ -41,10 +41,10 @@ class GameService {
     fun getGame(id: String): Game? = games[id]
 
     fun getPlayer(game: Game): Player? {
-        return game.players.find { it.id == getJwtSubject() }
+        return game.players.find { it.id == getUserId() }
     }
 
-    private fun getJwtSubject(): String? {
+    fun getUserId(): String {
         val authentication = SecurityContextHolder.getContext().authentication
         val jwtPrincipal: Jwt = authentication.principal as Jwt
         return jwtPrincipal.subject

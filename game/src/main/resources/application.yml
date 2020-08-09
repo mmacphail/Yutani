@@ -10,3 +10,6 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: https://mmacphail.eu.auth0.com/
+logging:
+  level:
+    org.jooq.tools.LoggerListener: DEBUG
