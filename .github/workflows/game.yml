@@ -3,6 +3,8 @@ name: game-CI
 on:
   push:
     branches: [ master ]
+    paths:
+    - 'game/**'
     
 jobs:
   build:
