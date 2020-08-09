@@ -10,7 +10,7 @@ import { Player } from './player';
 })
 export class GameService {
   
-  private gameUrl = '/v1/games/1'
+  private gameUrl = 'api/v1/games/1'
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
