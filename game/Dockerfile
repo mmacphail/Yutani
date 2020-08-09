@@ -1,7 +1,7 @@
 FROM openjdk:11.0.8-jdk as build
 ENV APP_HOME=/workspace/app/
 WORKDIR $APP_HOME
-COPY build.gradle.kts settings.gradle.kts gradlew .gradle $APP_HOME
+COPY build.gradle.kts settings.gradle.kts gradlew $APP_HOME
 COPY gradle $APP_HOME/gradle
 RUN ./gradlew build -x test || return 0
 COPY . .
