@@ -1,15 +1,31 @@
-<div class="card">
-    <div class="card-content">
-        <div class="msg-header">
-            <span class="msg-from"><small>{{ location.id }}</small></span>
-            <span class="msg-timestamp"></span>
-            <span class="msg-attachment"><fa-icon [icon]="faPaperclip"></fa-icon></span>
+<div class="level">
+    <!-- Left side -->
+    <div class="level-left">
+        <div class="level-item">
+            <p class="subtitle is-5" [attr.data-tooltip]="location.rumors">
+                <strong>{{ location.name }}</strong>
+            </p>
         </div>
-        <div class="msg-subject">
-            <span class="msg-subject"><strong id="fake-subject-1">{{ location.name }}</strong></span>
+        <div class="level-item">
         </div>
-        <div class="msg-snippet">
-            <p id="fake-snippet-1">{{ location.rumors }}</p>
+    </div>
+
+    <div class="level-center">
+        <div class="box notification is-info" [attr.data-tooltip]="costTooltip()">
+            {{ location.cost }} AP
+        </div>
+    </div>
+
+    <!-- Right side -->
+    <div class=" level-right ">
+        <div class="field has-addons ">
+            <p class="control ">
+                <button class="button ">
+                    <span [attr.data-tooltip]="travelTooltip()">
+                        Travel
+                    </span>
+                </button>
+            </p>
         </div>
     </div>
 </div>

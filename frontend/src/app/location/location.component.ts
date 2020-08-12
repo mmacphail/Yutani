@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { faPaperclip } from '@fortawesome/free-solid-svg-icons';
-import { Location } from '../location';
+import { Location } from '../entities';
 
 @Component({
   selector: 'app-location',
@@ -9,13 +8,18 @@ import { Location } from '../location';
 })
 export class LocationComponent implements OnInit {
 
-  faPaperclip = faPaperclip;
-
-  @Input() location: Location
+  @Input() location: Location;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  costTooltip() {
+    return `The cost to travel here is ${this.location.cost} AP.`
+  }
+
+  travelTooltip() {
+    return `Travelling to this location will cost you ${this.location.cost} action points. You can only travel once a day.`
+  }
 }

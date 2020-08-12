@@ -1,6 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { faCode, faInbox, faStar, faEnvelopeOpen, faFolderOpen, faChevronDown, faRecycle, faExclamationCircle, faTrash, faFolder, faTag, faChevronLeft, faChevronRight, faPaperclip } from '@fortawesome/free-solid-svg-icons';
-import { Location } from '../location';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-location-details',
@@ -8,14 +6,6 @@ import { Location } from '../location';
   styleUrls: ['./location-details.component.css']
 })
 export class LocationDetailsComponent implements OnInit {
-
-  faInbox = faInbox;
-  faTag = faTag;
-  faFolder = faFolder;
-  faTrash = faTrash;
-  faExclamationCircle = faExclamationCircle;
-
-  @Input() location: Location;
 
   constructor() { }
 

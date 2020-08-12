@@ -10,10 +10,10 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LocationsComponent } from './locations/locations.component';
-import { LocationComponent } from './location/location.component';
-import { LocationDetailsComponent } from './location-details/location-details.component';
 import { PlayerBannerComponent } from './player-banner/player-banner.component';
 import { TeamBannerComponent } from './team-banner/team-banner.component';
+import { LocationComponent } from './location/location.component';
+import { LocationDetailsComponent } from './location-details/location-details.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +23,10 @@ import { TeamBannerComponent } from './team-banner/team-banner.component';
     HomeComponent,
     ProfileComponent,
     LocationsComponent,
-    LocationComponent,
-    LocationDetailsComponent,
     PlayerBannerComponent,
-    TeamBannerComponent
+    TeamBannerComponent,
+    LocationComponent,
+    LocationDetailsComponent
   ],
   imports: [
     BrowserModule,
