@@ -25,6 +25,7 @@
                         ],
                         "styles": [
                             "node_modules/bulma/css/bulma.min.css",
+                            "node_modules/@creativebulma/bulma-tooltip/dist/bulma-tooltip.min.css",
                             "src/styles.css"
                         ],
                         "scripts": []

@@ -35,11 +35,11 @@ export class HomeComponent implements OnInit {
   constructor(public authService: AuthService, private gameService: GameService) { }
 
   ngOnInit(): void {
-    this.locations$ = this.gameService.getLocations$();
+    /*this.locations$ = this.gameService.getLocations$();
     this.currentPlayer$ = this.gameService.getCurrentPlayer$();
     this.currentLocation$ = this.locations$.pipe(
       map(locations => locations[0])
-    );
+    );*/
 
     /*
     this.currentPlayer$.pipe(

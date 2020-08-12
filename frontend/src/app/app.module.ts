@@ -12,6 +12,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LocationsComponent } from './locations/locations.component';
 import { LocationComponent } from './location/location.component';
 import { LocationDetailsComponent } from './location-details/location-details.component';
+import { PlayerBannerComponent } from './player-banner/player-banner.component';
+import { TeamBannerComponent } from './team-banner/team-banner.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LocationDetailsComponent } from './location-details/location-details.co
     ProfileComponent,
     LocationsComponent,
     LocationComponent,
-    LocationDetailsComponent
+    LocationDetailsComponent,
+    PlayerBannerComponent,
+    TeamBannerComponent
   ],
   imports: [
     BrowserModule,
