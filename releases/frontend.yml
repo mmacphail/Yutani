@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: mmacphail/yutani-frontend:sha-380be71
+          image: mmacphail/yutani-frontend:sha-2998233
           resources:
             limits:
               cpu: "1"
