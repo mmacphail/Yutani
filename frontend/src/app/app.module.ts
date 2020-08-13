@@ -14,6 +14,10 @@ import { PlayerBannerComponent } from './player-banner/player-banner.component';
 import { TeamBannerComponent } from './team-banner/team-banner.component';
 import { LocationComponent } from './location/location.component';
 import { LocationDetailsComponent } from './location-details/location-details.component';
+import { PeopleAtLocationComponent } from './people-at-location/people-at-location.component';
+import { EventComponent } from './event/event.component';
+import { EventListComponent } from './event-list/event-list.component';
+import { LocationChatComponent } from './location-chat/location-chat.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { LocationDetailsComponent } from './location-details/location-details.co
     PlayerBannerComponent,
     TeamBannerComponent,
     LocationComponent,
-    LocationDetailsComponent
+    LocationDetailsComponent,
+    PeopleAtLocationComponent,
+    EventComponent,
+    EventListComponent,
+    LocationChatComponent
   ],
   imports: [
     BrowserModule,

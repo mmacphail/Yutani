@@ -1,0 +1,32 @@
+<nav class="level">
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="heading">{{ event.title }}</p>
+        </div>
+    </div>
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="heading">Progression</p>
+            <p class="title">{{ event.progression }}/{{ event.goal}}</p>
+        </div>
+    </div>
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="heading">Cost</p>
+            <div class="box notification is-info" data-tooltip="The cost to participate in this event.">
+                {{ event.cost }} AP
+            </div>
+        </div>
+    </div>
+    <div class="level-item has-text-centered">
+        <div>
+            <p class="heading">Reward</p>
+            <div class="box notification is-info">
+                {{ event.reward }}
+            </div>
+        </div>
+    </div>
+    <div class="level-item has-text-centered">
+        <button class="button">Participate</button>
+    </div>
+</nav>

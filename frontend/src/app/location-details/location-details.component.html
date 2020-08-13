@@ -1,10 +1,23 @@
-<div class="box">
-    <div class="tabs">
-        <ul>
-            <li class="is-active"><a>Overview</a></li>
-            <li><a>Events</a></li>
-            <li><a>Chat</a></li>
-            <li><a>Other players at location</a></li>
-        </ul>
+<div class="card">
+    <header class="card-header">
+        <p class="card-header-title">
+            Port
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+            <span class="icon">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+        </a>
+    </header>
+    <div class="card-content">
+        <nav class="level">
+            <div class="content">
+                <p>After inspecting the abandonned city, you believe it is quite safe. This is the good place to start if you want to consolidate your influence over this island.</p>
+            </div>
+        </nav>
+        <hr/>
+        <app-event-list></app-event-list>
+        <hr/>
+        <app-location-chat></app-location-chat>
     </div>
 </div>

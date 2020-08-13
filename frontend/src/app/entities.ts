@@ -6,3 +6,12 @@ export interface Location {
     currentLocation: boolean,
     canTravelHere: boolean
 }
+
+export interface Event {
+    id: string,
+    title: string,
+    progression: number,
+    goal: number,
+    cost: number,
+    reward: string
+}
